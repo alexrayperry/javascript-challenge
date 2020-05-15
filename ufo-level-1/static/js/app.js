@@ -25,30 +25,37 @@ tableData.forEach((sighting) => {
     });
 });
 
+// Create variables to holdl html selectors
+
 var button = d3.select("#filter-btn");
 
-var form = d3.select("form")
+var form = d3.select("form");
+
+// Create event listeners to listen for when a specified even takes places and run function
 
 button.on("click", runEnter);
 form.on("submit", runEnter);
 
+// Begin writing function for preventing default action when form is submitted, 
+// listening when the button is clicked, and filtering table and displaying on webpage. 
+
 function runEnter() {
 
+    // Prevent default behavior
     d3.event.preventDefault();
 
+    // Select tag where user inserted a value
     var inputElement = d3.select("#datetime");
 
     var inputValue = inputElement.property("value");
 
-    console.log(inputValue);
-
+    //filter data by user input value
     var filteredData = tableData.filter(tableData => tableData.datetime === inputValue);
     
-    console.log(filteredData);
-
+    // remove current html displaying table
     tbody.html("");
 
-
+    // Loop through filtered data and display on table
     filteredData.forEach((search) => {
 
         // Get to the row html tag and define variable for location
