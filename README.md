@@ -28,5 +28,5 @@ each value in the list and appended an "option" element with the "select" elemen
 
 With the drop down in place, I created 5 different event listeners that would call on a function to filter the table by the users selection. This method was similar to the method used in the first challenge. The only differnce was the elements that we listend for and selected to find the user input and then use that input to filter the tabel and display the filtered data. 
 
-Unfortunately, the Aliens turned their backs on me before being able to get the drop downs and the filtering to communite with each other. Thus, only one filter can be selected at a time. Let it be known, the human species did all they could to get this data out. It will be up to another species to finish this task.....
+
 
